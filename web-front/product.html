@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Product</title>
+    <meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- stylesheet css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="css/templatemo-style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- google web font css -->
+	<link href='http://fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	
+<!-- navigation -->
+
+<div class="container">
+	<div class="navbar navbar-default navbar-static-top" role="navigation">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand"><img src="images/logo.png" class="img-responsive" alt="logo"></a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="about.html">ABOUT US</a></li>
+				<li><a href="product.html" class="active">PRODUCT</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+</div>		
+
+<!-- product header section -->
+<div id="product-header">
+	<div class="container">
+		
+		<ul class="select">
+			<li class="select-list">
+				<dl id="select1">
+					<dd class="classification">上装：</dd>
+					<dd class="select-all selected"><a href="#">全部</a></dd>
+					<dd><a href="#">针织衫</a></dd>
+					<dd><a href="#">毛呢外套</a></dd>
+					<dd><a href="#">T恤</a></dd>
+					<dd><a href="#">羽绒服</a></dd>
+					<dd><a href="#">棉衣</a></dd>
+					<dd><a href="#">卫衣</a></dd>
+					<dd><a href="#">风衣</a></dd>
+				</dl>
+			</li>
+			<li class="select-list">
+				<dl id="select2">
+					<dd class="classification">裤装：</dd>
+					<dd class="select-all selected"><a href="#">全部</a></dd>
+					<dd><a href="#">牛仔裤</a></dd>
+					<dd><a href="#">小脚/铅笔裤</a></dd>
+					<dd><a href="#">休闲裤</a></dd>
+					<dd><a href="#">打底裤</a></dd>
+					<dd><a href="#">哈伦裤</a></dd>
+				</dl>
+			</li>
+			<li class="select-list">
+				<dl id="select3">
+					<dd class="classification">裙装：</dd>
+					<dd class="select-all selected"><a href="#">全部</a></dd>
+					<dd><a href="#">连衣裙</a></dd>
+					<dd><a href="#">半身裙</a></dd>
+					<dd><a href="#">长袖连衣裙</a></dd>
+					<dd><a href="#">中长款连衣裙</a></dd>
+				</dl>
+			</li>
+			<li class="select-result">
+				<dl>
+					<dd class="classification">已选：</dd>
+					<dd class="select-no">暂时没有选择过滤条件</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- product chart -->
+<div id="product">
+	<div class="container">
+	    <div id="insert" style="width: 670px;height:400px;"></div>
+	    <div id="insert2" style="width: 670px;height:400px;"></div>
+	</div>
+</div>		
+
+<!-- copyright section -->
+<div class="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<p>Copyright 上海财经大学2014级计算机科学与技术Glory小组</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- javascript js -->	
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/echarts-all.js"></script>
+<script >
+ 	// 基于准备好的dom，初始化echarts图表
+    var myChart = echarts.init(document.getElementById('insert'));
+    option = {
+    	title:{
+             text:'舆情综合指数',
+             x:'left',
+    	},
+
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        show:'left',
+        data:['媒体关注度']
+    },
+    toolbox: {
+        show : true,
+        orient: 'horizontal',      // 布局方式，默认为水平布局，可选为：
+                                   // 'horizontal' ¦ 'vertical'
+        x: 'right',                // 水平安放位置，默认为全图右对齐，可选为：
+                                   // 'center' ¦ 'left' ¦ 'right'
+                                   // ¦ {number}（x坐标，单位px）
+        y: 'top',                  // 垂直安放位置，默认为全图顶端，可选为：
+                                   // 'top' ¦ 'bottom' ¦ 'center'
+                                   // ¦ {number}（y坐标，单位px）
+        color : ['#1e90ff','#22bb22','#92DEB6','#d2691e'],
+        backgroundColor: 'rgba(0,0,0,0)', // 工具箱背景颜色
+        borderColor: '#ccc',       // 工具箱边框颜色
+        borderWidth: 0,            // 工具箱边框线宽，单位px，默认为0（无边框）
+        padding: 5,                // 工具箱内边距，单位px，默认各方向内边距为5，
+        showTitle: true,
+        feature : {
+            mark : {
+                show : true,
+                title : {
+                    mark : '辅助线-开关',
+                    markUndo : '辅助线-删除',
+                    markClear : '辅助线-清空'
+                },
+                lineStyle : {
+                    width : 1,
+                    color : '#1e90ff',
+                    type : 'dashed'
+                }
+            },
+            dataZoom : {
+                show : true,
+                title : {
+                    dataZoom : '区域缩放',
+                    dataZoomReset : '区域缩放-后退'
+                }
+            },
+            dataView : {
+                show : true,
+                title : '数据视图',
+                readOnly: true,
+                lang : ['数据视图', '关闭', '刷新'],
+                optionToContent: function(opt) {
+                    var axisData = opt.xAxis[0].data;
+                    var series = opt.series;
+                    var table = '<table style="width:100%;text-align:center"><tbody><tr>'
+                                 + '<td>时间</td>'
+                                 + '<td>' + series[0].name + '</td>'
+                                 + '<td>' + series[1].name + '</td>'
+                                 + '</tr>';
+                    for (var i = 0, l = axisData.length; i < l; i++) {
+                        table += '<tr>'
+                                 + '<td>' + axisData[i] + '</td>'
+                                 + '<td>' + series[0].data[i] + '</td>'
+                                 + '<td>' + series[1].data[i] + '</td>'
+                                 + '</tr>';
+                    }
+                    table += '</tbody></table>';
+                    return table;
+                }
+            },
+            magicType: {
+                show : true,
+                title : {
+                    line : '动态类型切换-折线图',
+                    bar : '动态类型切换-柱形图',
+                    stack : '动态类型切换-堆积',
+                    tiled : '动态类型切换-平铺'
+                },
+                type : ['line', 'bar', 'stack', 'tiled']
+            },
+            restore : {
+                show : true,
+                title : '还原',
+                color : 'black'
+            },
+            saveAsImage : {
+                show : true,
+                title : '保存为图片',
+                type : 'jpeg',
+                lang : ['点击本地保存'] 
+            },
+            myTool : {
+                show : true,
+                title : '自定义扩展方法',
+                icon : 'image://../asset/ico/favicon.png',
+                onclick : function (){
+                    alert('myToolHandler')
+                }
+            }
+        }
+    },
+    calculable : true,
+    dataZoom : {
+        show : true,
+        realtime : true,
+        start : 70,
+        end : 100
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['06-12', '06-13', '06-14', '06-15', '06-16', '06-17', '06-18',
+                   '06-19', '06-20', '06-21', '06-22', '06-23', '06-24', '06-25',
+                   '06-26', '06-27'],//横坐标的日期，需要从数据库里面读取
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'媒体关注度',
+            type:'line',
+            smooth:true,
+            itemStyle:{
+            	normal:{
+            		color:'#F5DB93',
+            		lineStyle:{
+            			color:'#F5DB93',
+            		}
+            	}
+            },
+            data:function (){
+                var list = [];
+                for (var i = 1; i <= 30; i++) {
+                    list.push(Math.round(Math.random()* 10));//同上，random的一些数据
+                }
+                return list;
+            }()
+        }
+    ]
+    };
+        
+    // 为echarts对象加载数据 
+    myChart.setOption(option); 
+</script>
+<script >
+ 	// 基于准备好的dom，初始化echarts图表
+    var myChart = echarts.init(document.getElementById('insert2'));
+    option = {
+    	title:{
+             text:'舆情综合指数',
+             x:'left',
+    	},
+
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        show:'left',
+        data:['媒体关注度']
+    },
+    toolbox: {
+        show : true,
+        orient: 'horizontal',      // 布局方式，默认为水平布局，可选为：
+                                   // 'horizontal' ¦ 'vertical'
+        x: 'right',                // 水平安放位置，默认为全图右对齐，可选为：
+                                   // 'center' ¦ 'left' ¦ 'right'
+                                   // ¦ {number}（x坐标，单位px）
+        y: 'top',                  // 垂直安放位置，默认为全图顶端，可选为：
+                                   // 'top' ¦ 'bottom' ¦ 'center'
+                                   // ¦ {number}（y坐标，单位px）
+        color : ['#1e90ff','#22bb22','#92DEB6','#d2691e'],
+        backgroundColor: 'rgba(0,0,0,0)', // 工具箱背景颜色
+        borderColor: '#ccc',       // 工具箱边框颜色
+        borderWidth: 0,            // 工具箱边框线宽，单位px，默认为0（无边框）
+        padding: 5,                // 工具箱内边距，单位px，默认各方向内边距为5，
+        showTitle: true,
+        feature : {
+            mark : {
+                show : true,
+                title : {
+                    mark : '辅助线-开关',
+                    markUndo : '辅助线-删除',
+                    markClear : '辅助线-清空'
+                },
+                lineStyle : {
+                    width : 1,
+                    color : '#1e90ff',
+                    type : 'dashed'
+                }
+            },
+            dataZoom : {
+                show : true,
+                title : {
+                    dataZoom : '区域缩放',
+                    dataZoomReset : '区域缩放-后退'
+                }
+            },
+            dataView : {
+                show : true,
+                title : '数据视图',
+                readOnly: true,
+                lang : ['数据视图', '关闭', '刷新'],
+                optionToContent: function(opt) {
+                    var axisData = opt.xAxis[0].data;
+                    var series = opt.series;
+                    var table = '<table style="width:100%;text-align:center"><tbody><tr>'
+                                 + '<td>时间</td>'
+                                 + '<td>' + series[0].name + '</td>'
+                                 + '<td>' + series[1].name + '</td>'
+                                 + '</tr>';
+                    for (var i = 0, l = axisData.length; i < l; i++) {
+                        table += '<tr>'
+                                 + '<td>' + axisData[i] + '</td>'
+                                 + '<td>' + series[0].data[i] + '</td>'
+                                 + '<td>' + series[1].data[i] + '</td>'
+                                 + '</tr>';
+                    }
+                    table += '</tbody></table>';
+                    return table;
+                }
+            },
+            magicType: {
+                show : true,
+                title : {
+                    line : '动态类型切换-折线图',
+                    bar : '动态类型切换-柱形图',
+                    stack : '动态类型切换-堆积',
+                    tiled : '动态类型切换-平铺'
+                },
+                type : ['line', 'bar', 'stack', 'tiled']
+            },
+            restore : {
+                show : true,
+                title : '还原',
+                color : 'black'
+            },
+            saveAsImage : {
+                show : true,
+                title : '保存为图片',
+                type : 'jpeg',
+                lang : ['点击本地保存'] 
+            },
+            myTool : {
+                show : true,
+                title : '自定义扩展方法',
+                icon : 'image://../asset/ico/favicon.png',
+                onclick : function (){
+                    alert('myToolHandler')
+                }
+            }
+        }
+    },
+    calculable : true,
+    dataZoom : {
+        show : true,
+        realtime : true,
+        start : 70,
+        end : 100
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['06-12', '06-13', '06-14', '06-15', '06-16', '06-17', '06-18',
+                   '06-19', '06-20', '06-21', '06-22', '06-23', '06-24', '06-25',
+                   '06-26', '06-27'],//横坐标的日期，需要从数据库里面读取
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'媒体关注度',
+            type:'line',
+            smooth:true,
+            itemStyle:{
+            	normal:{
+            		color:'#F5DB93',
+            		lineStyle:{
+            			color:'#F5DB93',
+            		}
+            	}
+            },
+            data:function (){
+                var list = [];
+                for (var i = 1; i <= 30; i++) {
+                    list.push(Math.round(Math.random()* 10));//同上，random的一些数据
+                }
+                return list;
+            }()
+        }
+    ]
+    };
+        
+    // 为echarts对象加载数据 
+    myChart.setOption(option); 
+</script>
+</body>
+</html>

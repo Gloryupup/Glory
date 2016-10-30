@@ -1,0 +1,86 @@
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+a,img{
+	border:0;
+}
+
+body{
+	font:12px/180% Arial, Helvetica, sans-serif, "ÐÂËÎÌå";
+}
+
+/* select */
+.select{
+	margin:5% auto 0 auto;
+	font-size:15px;
+
+}
+.select li{
+	color: #808080;
+	list-style:none;
+	padding:15px 0 ;
+	margin: 0;
+	border-bottom: 1px solid #666;
+	background-color: #202020;
+}
+
+.select dl{
+	zoom:1;
+	position:relative;
+	line-height:24px; 
+	margin-bottom: 0;
+}
+
+.select dl:after{
+	content:" ";
+	display:block;
+	clear:both;
+	height:0;
+	overflow:hidden;
+}
+.select dl .classification{
+	font-weight: bold;
+}
+.select dd{
+	float:left;
+	display:inline;
+	margin:0 0 5px 5px;
+	line-height:24px;
+}
+.select a{
+	display:inline-block;
+	white-space:nowrap;
+	height:24px;
+	padding:0 10px;
+	text-decoration:none;
+	color:#fff;
+	border-radius:2px;
+}
+.select a:hover{
+	color:#fff;
+	background-color:  #d54ab6;
+}
+
+.select .selected a{
+	color:#fff;
+	background-color: #d54ab6;
+}
+
+.select-no{
+	color:#999;
+}
+.select .select-result{
+	border-bottom: none;
+	background-color:#101010; 
+}
+.select .select-result a{
+	padding-right:20px;
+	background: #d54ab6 url("close.gif") right 9px no-repeat;
+}
+
+.select .select-result a:hover{
+	background-position:right -15px;
+}
